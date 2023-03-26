@@ -1,5 +1,5 @@
 ###########################################################
-#External Files Assignment - Sonic Game Show
+#No copyright infringement intended - Sonic Game Show
 #Kirby is such a smart fellow and I wish to see her succeed.
 #March 26, 2023
 ###########################################################
@@ -48,7 +48,8 @@ def default_files(type):
         pref_dict['Challenge'] = False
         pref_dict['Volume'] = 100.0
     
-        with open("PlayerPreferences.txt", 'w') as prefs:
+    #   with open("PlayerPreferences.txt", 'w') as prefs:
+        with open("config.cfg", 'w') as prefs:
             prefs.write(str(pref_dict))
             prefs.close()
     
@@ -69,12 +70,12 @@ def write_songs():
 
 #Opens and writes data from files to variables to be used later
 try:
-    with open("PlayerPreferences.txt", 'r') as prefs:
+    with open("config.cfg", 'r') as prefs:
         pref_dict = eval(prefs.read())
         prefs.close()
 
 except:
-    with open("PlayerPreferences.txt", 'w') as prefs:
+    with open("config.cfg", 'w') as prefs:
         default_files('p')
         prefs.close()
     
@@ -221,7 +222,7 @@ def Main_Menu():
         #Do Fourth
         window.close()
         Main_Menu()
-        print("Look at dem trophies! That you don't have :trol:")
+        print("Come back when you get a trophy, loser.")
     elif event == "Options":
         window.close()
         Options_Menu()
