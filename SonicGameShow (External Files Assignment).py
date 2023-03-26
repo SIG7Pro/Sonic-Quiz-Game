@@ -1,7 +1,7 @@
 ###########################################################
-#External Files Assignment - Vocaloid Game Show
-#CaptainKirby
-#March 25, 2023
+#External Files Assignment - Sonic Game Show
+#Kirby is such a- wait, am I going to say it?
+#March 26, 2023
 ###########################################################
 
 #Credits
