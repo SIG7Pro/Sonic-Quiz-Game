@@ -112,7 +112,7 @@ songs_list = write_songs()
 def make_window(type):
     global options
     if type == "mm":
-        main_menu = [ [sg.Push(), sg.Text("Welcome to the Vocaloid Quiz Game!", font=('times_new_roman', 24, 'bold')), sg.Push()],
+        main_menu = [ [sg.Push(), sg.Text("Welcome to the most way past cool Sonic Quiz Game!", font=('times_new_roman', 24, 'bold')), sg.Push()],
                       [sg.Push(), sg.Image("images/TitleImage.png", pad=(20)), sg.Push()],
                       [sg.Push(), sg.Button("Play", expand_x=True), sg.Push()],
                       [sg.Push(), sg.Button("Scoreboard", expand_x=True), sg.Push()],
@@ -128,19 +128,19 @@ def make_window(type):
                     [sg.Push(), sg.Checkbox("Challenge Questions", font=('times_new_roman', 12), pad=20, default=pref_dict['Challenge']), sg.Push()],
                     [sg.Push(), sg.Slider(range=(0, 100), default_value=pref_dict['Volume'], orientation='h'), sg.Push()],
                     [sg.Push(), sg.Text("Slider Changes The Volume",font=('times_new_roman', 12)), sg.Push()],
-                    [sg.Push(), sg.Button("Clear Save Data", pad=30, expand_x=True), sg.Push()],
+                    [sg.Push(), sg.Button("Clear Data", pad=30, expand_x=True), sg.Push()],
                     [sg.Push(), sg.Button("Apply"), sg.pin(sg.Button("Exit", expand_x=True)), sg.Push()] ]
         
         return sg.Window("Options", options)
     
     elif type == 'mode':
-        mode = [ [sg.Push(), sg.Text("What mode would you like to play?", font=('times_new_roman', 12), pad=20), sg.Push()],
+        mode = [ [sg.Push(), sg.Text("Select Game", font=('times_new_roman', 12), pad=20), sg.Push()],
                  [sg.Button("Solo", size=20), sg.pin(sg.Button("Vs. Computer", size=20)), sg.pin(sg.Button("Back", size=20))] ]
         
         return sg.Window("Mode Select", mode)
     
     elif type == 'pn':
-        player_name = [ [sg.Push(), sg.Text("What is your name?", font=('times_new_roman', 12), pad=20), sg.Push()],
+        player_name = [ [sg.Push(), sg.Text("Insert Username", font=('times_new_roman', 12), pad=20), sg.Push()],
                         [sg.Push(), sg.Input(pad=20), sg.Push()],
                         [sg.Push(), sg.Button("Enter", size=20), sg.pin(sg.Button("Exit", size=20)), sg.Push()] ]
         
@@ -269,7 +269,7 @@ def scoreboard():
         event, values = window.read()
         
         if event == 'Exit':
-            print("You broke this somehow")
+            print("You must've fallen into Eggman's traps!")
         else:
             window.close()
             Main_Menu()
