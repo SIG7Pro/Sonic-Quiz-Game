@@ -1,6 +1,6 @@
 ###########################################################
 #External Files Assignment - Sonic Game Show
-#Kirby is such a- wait, am I going to say it?
+#Kirby is such a smart fellow and I wish to see her succeed.
 #March 26, 2023
 ###########################################################
 
